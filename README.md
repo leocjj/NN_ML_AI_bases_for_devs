@@ -41,6 +41,8 @@ https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-m
 
 ## Tasks
 
+Based on the Holberton School Machine Learning curriculum, in this repository you will find the following tasks:
+
 1. **Perceptron - One neuron Neural Network (NN)**
 2. **One layer NN - binary classification**
 3. **Multi layer NN (deep neural network) - binary classificator**

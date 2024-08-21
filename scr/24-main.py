@@ -2,10 +2,10 @@
 
 import numpy as np
 
-oh_encode = __import__('24-one_hot_encode').one_hot_encode
+oh_encode = __import__("24-one_hot_encode").one_hot_encode
 
-lib = np.load('../data/MNIST.npz')
-Y = lib['Y_train'][:10]
+lib = np.load("data/MNIST.npz")
+Y = lib["Y_train"][:10]
 
 print(Y)
 Y_one_hot = oh_encode(Y, 10)
@@ -41,7 +41,7 @@ print(Y)
 Y_one_hot = oh_encode(Y, 10)
 print(Y_one_hot)
 
-Y = 'A'
+Y = "A"
 print(Y)
 Y_one_hot = oh_encode(Y, 10)
 print(Y_one_hot)
@@ -91,7 +91,7 @@ print(Y)
 Y_one_hot = oh_encode(Y, 5)
 print(Y_one_hot)
 
-Y = np.array(['a'])
+Y = np.array(["a"])
 print(Y)
 Y_one_hot = oh_encode(Y, 10)
 print(Y_one_hot)
@@ -123,7 +123,7 @@ print(Y_one_hot)
 
 Y = np.array([1, 1, 2, 3, 4, 5])
 print(Y)
-Y_one_hot = oh_encode(Y, 'A')
+Y_one_hot = oh_encode(Y, "A")
 print(Y_one_hot)
 
 Y = np.array([1, 1, 2, 3, 4, 5])
