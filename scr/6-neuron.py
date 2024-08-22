@@ -11,11 +11,11 @@ def sigmoid(x):
     :param x: int or array. Use math.ext instead of np.exp for integers.
     :return: sigmoid function of x
     """
-    return np.exp(-np.logaddexp(0., -x))
+    return np.exp(-np.logaddexp(0.0, -x))
 
 
 class Neuron:
-    """ Class that defines a single neuron performing binary classification """
+    """Class that defines a single neuron performing binary classification"""
 
     def __init__(self, nx):
         """
@@ -23,26 +23,26 @@ class Neuron:
         :param nx: number of input features to the neuron
         """
         if not isinstance(nx, int):
-            raise TypeError('nx must be an integer')
+            raise TypeError("nx must be an integer")
         if nx < 1:
-            raise ValueError('nx must be a positive integer')
+            raise ValueError("nx must be a positive integer")
         self.__W = np.random.randn(1, nx)
         self.__b = 0
         self.__A = 0
 
     @property
     def W(self):
-        """  getter method """
+        """getter method"""
         return self.__W
 
     @property
     def b(self):
-        """  getter method """
+        """getter method"""
         return self.__b
 
     @property
     def A(self):
-        """  getter method """
+        """getter method"""
         return self.__A
 
     def forward_prop(self, X):
@@ -69,8 +69,9 @@ class Neuron:
         :return: return average of the loss (error) function.
             loss function increase in the opposite sign the output is going.
         """
-        return (-1 / Y.shape[1]) *\
-            np.sum(Y * np.log(A) + (1 - Y) * np.log(1.0000001 - A))
+        return (-1 / Y.shape[1]) * np.sum(
+            Y * np.log(A) + (1 - Y) * np.log(1.0000001 - A)
+        )
 
     def evaluate(self, X, Y):
         """
@@ -105,7 +106,7 @@ class Neuron:
         m = Y.shape[1]
         dZ = A - Y
         self.__W -= (alpha * ((1 / m) * np.matmul(X, dZ.T))).T
-        self.__b -= (alpha * ((1 / m) * np.sum(dZ)))
+        self.__b -= alpha * ((1 / m) * np.sum(dZ))
 
     def train(self, X, Y, iterations=5000, alpha=0.05):
         """
@@ -122,13 +123,13 @@ class Neuron:
             training have occurred
         """
         if not isinstance(iterations, int):
-            raise TypeError('iterations must be an integer')
+            raise TypeError("iterations must be an integer")
         if iterations < 1:
-            raise ValueError('iterations must be a positive integer')
+            raise ValueError("iterations must be a positive integer")
         if not isinstance(alpha, float):
-            raise TypeError('alpha must be a float')
+            raise TypeError("alpha must be a float")
         if alpha < 0:
-            raise ValueError('alpha must be positive')
+            raise ValueError("alpha must be positive")
         for i in range(iterations):
             self.forward_prop(X)
             self.gradient_descent(X, Y, self.__A, alpha)

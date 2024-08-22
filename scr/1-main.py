@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# 1. Privatize Neuron
+
 import numpy as np
 
 Neuron = __import__("1-neuron").Neuron
@@ -13,5 +15,7 @@ neuron = Neuron(X.shape[0])
 print(neuron.W)
 print(neuron.b)
 print(neuron.A)
+# Should throw an error: AttributeError: can't set attribute 'A'
+# Because A is a getter and has no setter method
 neuron.A = 10
 print(neuron.A)

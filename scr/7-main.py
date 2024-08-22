@@ -11,10 +11,12 @@ X_train = X_train_3D.reshape((X_train_3D.shape[0], -1)).T
 lib_dev = np.load("data/Binary_Dev.npz")
 X_dev_3D, Y_dev = lib_dev["X"], lib_dev["Y"]
 X_dev = X_dev_3D.reshape((X_dev_3D.shape[0], -1)).T
-
 np.random.seed(0)
+
 neuron = Neuron(X_train.shape[0])
-A, cost = neuron.train(X_train, Y_train, iterations=105)
+# Train the neuron with iterations, learning rate (alpha), and print cost after 'step' iterations
+A, cost = neuron.train(X_train, Y_train, iterations=20, alpha=0.1, step=1)
+
 accuracy = np.sum(A == Y_train) / Y_train.shape[1] * 100
 print("Train cost:", cost)
 print("Train accuracy: {}%".format(accuracy))

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# 2. Neuron Forward Propagation
+
 import numpy as np
 
 Neuron = __import__("2-neuron").Neuron

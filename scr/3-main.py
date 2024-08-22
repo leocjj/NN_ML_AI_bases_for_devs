@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+# 3. Neuron Cost
+# Cost: the function that calculates the loss, which the network is minimising during training.
+# In most cases of supervised learning, that would be the distance between the predicted value,
+# and ground truth labeled value
+
 import numpy as np
 
 Neuron = __import__("3-neuron").Neuron

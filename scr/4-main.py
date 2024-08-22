@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# 4. Evaluate Neuron
+
 import numpy as np
 
 Neuron = __import__("4-neuron").Neuron

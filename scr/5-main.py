@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# 5. Neuron Gradient Descent
+#
+
 import numpy as np
 
 Neuron = __import__("5-neuron").Neuron
