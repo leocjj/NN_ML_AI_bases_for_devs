@@ -1,22 +1,22 @@
 # NN_ML_AI_bases_for_devs
+## Neural Networks, Machine Learning and AI bases for devs
+
 The most basic and fundamental concepts to understand Neural Networks, Machine Learning and AI
 
 ```bash
-# Neural Networks, Machine Learning and AI bases for devs
+# Install Python using Miniconda (recommended)
+# https://docs.anaconda.com/miniconda/
+# Quick command line install for Windows
+# https://docs.anaconda.com/miniconda/#quick-command-line-install
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o miniconda.exe
+start /wait "" miniconda.exe /S
+del miniconda.exe
+
+# Create a new conda environment and install the required packages
 conda create -n nn_ml_ai python=3.10
 conda activate nn_ml_ai
 pip install -r requirements.txt
-
 ```
-
-### Resources
-
-
-### Objectives
-
-
-## Requirementes
-
 
 ## Execution
 - To execute examples for each task, run the *xx-main.py* file related in the scr folder.
@@ -24,7 +24,7 @@ pip install -r requirements.txt
 - For tasks 27 and 28, download trained models from:
 https://s3.amazonaws.com/intranet-projects-files/holbertonschool-ml/27-saved.pkl
   and
-  https://s3.amazonaws.com/intranet-projects-files/holbertonschool-ml/28-saved.pkl
+https://s3.amazonaws.com/intranet-projects-files/holbertonschool-ml/28-saved.pkl
 
 
 ## datasets
@@ -58,15 +58,13 @@ https://www.linkedin.com/pulse/activation-functions-neural-networks-leonardo-cal
 
 ## Built With
 
-* Python 3.10
+* Python 3.10.14
 * NumPy 2.1.0
 * Matplotlib 3.9.2
 
 
-## Author
+## [LeoCJJ](https://github.com/leocjj)
 
 **Leonardo Calderon J.** 
-
-## [LeoCJJ](https://github.com/leocjj)
 
 2024
